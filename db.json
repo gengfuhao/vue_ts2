@@ -1015,6 +1015,22 @@
       "userId": "110",
       "photo": "http://localhost:8080/assets/images/photogray1.webp",
       "id": 5
+    },
+    {
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": 1,
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 6
     }
   ],
   "afterCart": []
