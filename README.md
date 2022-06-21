@@ -32,7 +32,7 @@ json-server db.json --routes routes.json
 "goodsDisplay": [
 {
 "goodId": 10195,
-"goodsName": "",
+"goodsName": "ff",
 "goodsDescribe": "伸びる素材でぴったりフィット！厚さ 38cm まで対応。敷ふとんにも、マットレスにも使える！スモールシングル-シングル用。",
 "infoList": [
 {
@@ -42,7 +42,7 @@ json-server db.json --routes routes.json
 "color": "gray",
 "colorUrl": "https://www.nitori-net.jp/ecstatic/image/sys-master/images/8965479792670/BasicColor_GRY.jpg",
 
-"titleName": "GY",
+"titleName": "yY",
 "price": 1790,
 "oldPrice": "1990",
 "dropTime": "2022/05/16",
