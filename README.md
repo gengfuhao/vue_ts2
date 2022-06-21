@@ -26,8 +26,6 @@ npm run lint
 
 ### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 json-server db.json --routes routes.json
 
 "goodsDisplay": [
