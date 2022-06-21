@@ -43,6 +43,7 @@ json-server db.json --routes routes.json
 "colorUrl": "https://www.nitori-net.jp/ecstatic/image/sys-master/images/8965479792670/BasicColor_GRY.jpg",
 
 "titleName": "yY",
+
 "price": 1790,
 "oldPrice": "1990",
 "dropTime": "2022/05/16",
