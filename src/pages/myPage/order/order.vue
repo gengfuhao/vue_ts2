@@ -64,19 +64,14 @@
                 <dd>
                   <div class="g-select g-select-sm">
                     <i class="g-i g-i-dropdown" aria-hidden="true"></i>
-                    <select
-                      id="orderTime"
-                      name="orderTime"
-                      onchange="submit(this.form)"
-                    >
-                      <option value="00" selected="selected">
-                        過去半年分の注文
+                    <select id="orderTime" name="orderTime" v-model="years">
+                      <option
+                        v-for="(list, index) in dateList"
+                        :key="list.k"
+                        :value="list.k"
+                      >
+                        {{ list.v }}
                       </option>
-                      <option value="10">2022年分の注文</option>
-                      <option value="11">2021年分の注文</option>
-                      <option value="12">2020年分の注文</option>
-                      <option value="13">2019年分の注文</option>
-                      <option value="14">2018年分の注文</option>
                     </select>
                   </div>
                 </dd>
@@ -89,9 +84,9 @@
                     <select
                       id="orderStatus"
                       name="orderStatus"
-                      onchange="submit(this.form)"
+                      v-model="selected"
                     >
-                      <option value="ALL" selected="selected">すべて</option>
+                      <option value="ALL">すべて</option>
                       <option value="ORDERS">受注済</option>
                       <option value="READY">出荷・お渡し準備中</option>
                       <option value="SHIPPED">出荷・配送・お渡し済</option>
@@ -108,7 +103,11 @@
               />
             </form>
             <div class="g-block-xs">
-              <p>注文履歴がありません。</p>
+              <orderBody
+                v-for="(li, index) in List"
+                :key="index"
+                v-bind="li"
+              ></orderBody>
             </div>
           </div>
         </div>
@@ -118,13 +117,63 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-
+import orderBody from "./orderBody.vue";
+import {
+  defineComponent,
+  onMounted,
+  computed,
+  reactive,
+  toRefs,
+  watch,
+  ref,
+} from "vue";
+import { useStore } from "../../../store/index";
 export default defineComponent({
   name: "order",
-  components: {},
+  components: { orderBody },
+
   setup() {
-    return {};
+    const store = useStore();
+    onMounted(() => {
+      store.dispatch("setUserInfo");
+    });
+    const years = ref(GetDateStr(-180));
+    const selected = ref("ALL");
+    //watch监视years和selected属性值
+    watch(
+      [years, selected],
+
+      ([newCount, newCount2], [oldCount, oldCount2]) => {
+        store.commit("changeUserInfo", { newCount, newCount2 });
+      },
+      { deep: true, immediate: true }
+    );
+
+    //获取半年前的日期
+    function GetDateStr(AddDayCount) {
+      const dd = new Date();
+      dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期
+      const y = dd.getFullYear();
+      const m =
+        dd.getMonth() + 1 < 10 ? "0" + (dd.getMonth() + 1) : dd.getMonth() + 1; //获取当前月份的日期，不足10补0
+      const d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate(); //获取当前几号，不足10补0
+      return y + "-" + m + "-" + d;
+    }
+    const thisYear = new Date().getFullYear(); //获取年份
+    //日期展示数组
+    const dateList = [
+      { k: GetDateStr(-180), v: "過去半年分の注文" },
+      { k: thisYear, v: thisYear + "年分の注文" },
+      { k: thisYear - 1, v: thisYear - 1 + "年分の注文" },
+      { k: thisYear - 2, v: thisYear - 2 + "年分の注文" },
+      { k: thisYear - 3, v: thisYear - 3 + "年分の注文" },
+      { k: thisYear - 4, v: thisYear - 4 + "年分の注文" },
+    ];
+
+    let List = computed(() => store.getters.getNewUserInfo);
+    console.log("啥情况", List);
+
+    return { years, selected, List, dateList };
   },
 });
 </script>

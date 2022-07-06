@@ -5,5 +5,8 @@
   "/goods/detail/review/qa/:goodsId": "/goodsDetailReviewQA?goodsId=:goodsId",
   "/goods/display/:goodsId": "/goodsDisplay?goodsId=:goodsId",
   "/info/cart/:goodsId": "/infoCart?goodsId=:goodsId",
-  "/after/cart/:goodsId": "/afterCart?goodsId=:goodsId"
+  "/after/cart/:goodsId": "/afterCart?goodsId=:goodsId",
+  "/userInfo/:userId": "/userInfo?userId=:userId",
+  "/orderDetail/:orderId": "/orderDetail?orderId=:orderId",
+  "/user/from/:userID": "/userFrom?userID=:userID"
 }

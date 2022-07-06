@@ -3,13 +3,15 @@ import HomePage from "../pages/HomePage.vue";
 import GoodsDetail from "../pages/GoodsDetail.vue";
 import infoCart from "../pages/infoCart.vue";
 import myAccount from "../pages/myAccount.vue";
-import order from "../pages/myPage/order.vue";
-import likeGoods from "../pages/myPage/likeGoods.vue";
+import order from "../pages/myPage/order/order.vue";
+import orderDetail from "../pages/myPage/order/orderDetail.vue";
+import likeGoods from "../pages/myPage/likeGoods/likeGoods.vue";
 import shopLike from "../pages/myPage/shopLike.vue";
-import userInfo from "../pages/myPage/userInfo.vue";
+import userInfo from "../pages/myPage/userInfo/userInfo.vue";
 import address from "../pages/myPage/address.vue";
 import userPay from "../pages/myPage/userPay.vue";
-
+import changeMaillAdress2 from "../pages/myPage/userInfo/changeMaillAdress2.vue";
+import changeMaillAdress1 from "../pages/myPage/userInfo/changeMaillAdress1.vue";
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -43,6 +45,11 @@ export default createRouter({
       },
     },
     {
+      path: "/orderDetail",
+      component: orderDetail,
+      props: true,
+    },
+    {
       path: "/shopLike",
       component: shopLike,
       props: true,
@@ -68,6 +75,13 @@ export default createRouter({
         isShow: true,
         title: "お客様情報の確認・変更",
       },
+      children: [
+        {
+          path: "changeMaillAdress1",
+          component: changeMaillAdress1,
+          props: true,
+        },
+      ],
     },
     {
       path: "/address",
@@ -86,6 +100,11 @@ export default createRouter({
         isShow: true,
         title: "クレジットカードの変更・登録",
       },
+    },
+    {
+      path: "/changeMaillAdress2",
+      component: changeMaillAdress2,
+      props: true,
     },
   ],
 });

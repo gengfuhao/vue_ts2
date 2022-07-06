@@ -128,11 +128,14 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue";
 import { useRouter } from "vue-router";
+
 export default defineComponent({
   name: "myAccount",
   components: {},
+
   setup() {
     const router = useRouter();
+
     const list = router.getRoutes().filter((x) => x.meta.isShow);
 
     const data = reactive({
