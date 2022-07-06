@@ -994,13 +994,82 @@
       "price": "1790",
       "delivery": "2～6日で出荷",
       "deliveryMethod": "（店舗受取できない）",
-      "amount": 13,
-      "sum": 23270,
+      "amount": "12",
+      "sum": 1790,
       "userId": "110",
       "photo": "http://localhost:8080/assets/images/photogray1.webp",
-      "id": 4
+      "id": 9
     },
     {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": 1,
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 10
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": 1,
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 11
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "129",
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 12
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "14",
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/goods1.jpg",
+      "id": 13
+    },
+    {
+      "storeName": "中意的商品",
       "freight": 500,
       "freeFreight": 10000,
       "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
@@ -1014,7 +1083,7 @@
       "sum": 25060,
       "userId": "110",
       "photo": "http://localhost:8080/assets/images/photogray1.webp",
-      "id": 5
+      "id": 14
     },
     {
       "freight": 500,
@@ -1030,8 +1099,369 @@
       "sum": 1790,
       "userId": "110",
       "photo": "http://localhost:8080/assets/images/photogray1.webp",
-      "id": 6
+      "id": 15
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "149",
+      "sum": 25060,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 16
+    },
+    {
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": 1,
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 17
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "158",
+      "sum": 25060,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 18
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "149",
+      "sum": 25060,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 19
+    },
+    {
+      "storeName": "中意的商品",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットGY SS-S)",
+      "goodsNumber": "7518027",
+      "color": "gray",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": "148",
+      "sum": 25060,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photogray1.webp",
+      "id": 20
     }
   ],
-  "afterCart": []
+  "afterCart": [],
+  "userInfo": [
+    {
+      "userId": "888",
+      "orderList": [
+        {
+          "orderId": "EC0001-20200101",
+          "orderDate": "2020/01/01",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・配送・お渡し済",
+              "statusValue": "SHIPPED",
+              "deliverytype": "配送員組立設置",
+              "deliverDate": "2020/01/03",
+              "goodsId": 10195,
+              "quantity": 1,
+              "price": 3000
+            }
+          ]
+        },
+        {
+          "orderId": "EC0002-20210101",
+          "orderDate": "2021/01/01",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "キャンセル済",
+              "statusValue": "CANCELLED",
+              "deliverytype": "宅急便",
+              "deliverDate": "2021/01/03",
+              "goodsId": 10195,
+              "quantity": 1,
+              "price": 3000
+            }
+          ]
+        },
+        {
+          "orderId": "EC0002-20211228",
+          "orderDate": "2021/12/28",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・配送・お渡し済",
+              "statusValue": "SHIPPED",
+              "deliverytype": "宅急便",
+              "deliverDate": "2021/12/31",
+              "goodsId": 10197,
+              "quantity": 1,
+              "price": 3000
+            }
+          ]
+        },
+        {
+          "orderId": "EC0003-20220101",
+          "orderDate": "2022/01/01",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・配送・お渡し済",
+              "statusValue": "SHIPPED",
+              "deliverytype": "配送員組立設置",
+              "deliverDate": "2022/01/03",
+              "goodsId": 10196,
+              "quantity": 2,
+              "price": 6000
+            }
+          ]
+        },
+        {
+          "orderId": "EC0004-20220201",
+          "orderDate": "2022/02/01",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・配送・お渡し済",
+              "statusValue": "SHIPPED",
+              "deliverytype": "宅急便",
+              "deliverDate": "2022/02/03",
+              "goodsId": 10195,
+              "quantity": 1,
+              "price": 3000
+            }
+          ]
+        },
+        {
+          "orderId": "EC0004-20220601",
+          "orderDate": "2022/06/20",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・お渡し準備中",
+              "statusValue": "READY",
+              "deliverytype": "配送員組立設置",
+              "deliverDate": "2022/06/25",
+              "goodsId": 10195,
+              "quantity": 1,
+              "price": 3000
+            },
+            {
+              "deliveryStatus": "出荷・お渡し準備中",
+              "statusValue": "READY",
+              "deliverytype": "宅急便",
+              "deliverDate": "2022/06/30",
+              "goodsId": 10196,
+              "quantity": 1,
+              "price": 2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "userId": "999",
+      "orderList": [
+        {
+          "orderId": "EC0001-20200101",
+          "orderDate": "2020/01/01",
+          "store": "ニトリネット",
+          "orderDetail": [
+            {
+              "deliveryStatus": "出荷・配送・お渡し済",
+              "statusValue": "SHIPPED",
+              "deliverytype": "配送員組立設置",
+              "deliverDate": "2020/01/03",
+              "goodsId": 10195,
+              "quantity": 1,
+              "price": 3000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "orderDetail": [
+    {
+      "orderId": "EC0003-20220101",
+      "orderDate": "2022/06/20",
+      "store": "ニトリネット",
+      "payment": "クレジットカード  一括払い",
+      "usePoint": 100,
+      "userName": "太郎",
+      "postCode": 111000,
+      "address": "東京都xxxxxxxxxxx",
+      "email": "nitori@gmail.com",
+      "phoneNum": "070-1111-1111",
+      "deliverAddress": "注文者情報と同じ",
+      "receipt": "なし",
+      "orderDetail": [
+        {
+          "deliveryStatus": "出荷・お渡し準備中",
+          "statusValue": "READY",
+          "deliverytype": "配送員組立設置",
+          "deliverNum": "1234455533",
+          "deliverDate": "2022/06/25",
+          "goodsId": 10195,
+          "photo": "http://localhost:8080/assets/images/photogray1.webp",
+          "size": "シングル",
+          "sku": "10195s_wh",
+          "color": "ホワイト",
+          "title": "ゴムバンド付き敷きパッド　シングル(NクールWSP n-s WH SD)",
+          "quantity": 1,
+          "price": 3000
+        },
+        {
+          "deliveryStatus": "出荷・お渡し準備中",
+          "statusValue": "READY",
+          "deliverytype": "宅急便",
+          "deliverNum": "1234455534",
+          "deliverDate": "2022/06/30",
+          "goodsId": 10196,
+          "photo": "http://localhost:8080/assets/images/photogray1.webp",
+          "size": "シングル",
+          "sku": "10196s_wh",
+          "color": "ホワイト",
+          "title": "ゴムバンド付き敷きパッド",
+          "quantity": 1,
+          "price": 2000
+        }
+      ]
+    }
+  ],
+  "likeGoodsList": [
+    {
+      "storeName": "44",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　スモールシングル－シングル(パレットRO SS-S)",
+      "goodsNumber": "7518021",
+      "color": "rose",
+      "sizeName": "スモールシングル-シングル",
+      "price": "1790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取できない）",
+      "amount": 1,
+      "sum": 1790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photorose1.webp",
+      "id": 2
+    },
+    {
+      "storeName": "44",
+      "freight": 500,
+      "freeFreight": 10000,
+      "product": "たて・よこストレッチ　Nフィットシーツ　ワイドダブル－クイーン(パレットRO WD-Q)",
+      "goodsNumber": "7518029",
+      "color": "rose",
+      "sizeName": "ワイドダブル-クイーン",
+      "price": "3790",
+      "delivery": "2～6日で出荷",
+      "deliveryMethod": "（店舗受取可能商品）",
+      "amount": 1,
+      "sum": 3790,
+      "userId": "110",
+      "photo": "http://localhost:8080/assets/images/photorose1.webp",
+      "id": 3
+    }
+  ],
+  "listName": [
+    {
+      "storeName": "中意的商品",
+      "id": 1
+    },
+    {
+      "storeName": "88",
+      "id": 16
+    },
+    {
+      "storeName": "juy",
+      "id": 17
+    },
+    {
+      "storeName": "gggg",
+      "id": 18
+    },
+    {
+      "storeName": "t45t45",
+      "id": 19
+    }
+  ],
+  "userFrom": [
+    {
+      "userID": 123,
+      "Notice": true,
+      "firstName": "耿",
+      "lastName": "FH",
+      "JfirstName": "ゲン",
+      "JlastName": "フーハオ",
+      "mail": "genfuhao@gmail.com",
+      "number1": "08036901849",
+      "number2": "",
+      "sex": "男",
+      "year": 1995,
+      "month": 5,
+      "day": 22,
+      "zipCode": 1240024,
+      "Prefectures": "東京都",
+      "municipalities": "葛飾区",
+      "townname": "新小岩",
+      "chomeaddress1": 90,
+      "chomeaddress2": 90,
+      "chomeaddress3": 90,
+      "apartment": "sfdgsdfg",
+      "housenumber": 111,
+      "build": "戸建て",
+      "elevator": "なし",
+      "changePassWord": false,
+      "id": 1,
+      "password1": "",
+      "password2": ""
+    }
+  ],
+  "userPassWord": [
+    {
+      "password1": "",
+      "id": 1
+    }
+  ]
 }

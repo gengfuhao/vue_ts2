@@ -99,26 +99,20 @@
       </li>
       <li class="g-grid_item p-misc_item">
         <a
-          onclick="jswishclick()"
           id="addFavoriteA"
           data="7518047"
           data-login="anonymous"
           class="g-hover"
           data-clickable=""
         >
-          <div class="p-misc_i g-hover_img">
+          <div class="p-misc_i g-hover_img" @click="addLike">
             <i class="g-s g-s-favorite-g" aria-hidden="true"
               ><span class="material-symbols-outlined"> favorite </span></i
             >
           </div>
-          <span class="p-misc_label">お気に入り</span>
-        </a>
-
-        <a onclick="" id="addFavoriteDiv" class="g-hover" style="display: none">
-          <div class="p-misc_i g-hover_img">
-            <i class="g-s g-s-favorite"></i>
+          <div>
+            <span class="p-misc_label">お気に入り</span>
           </div>
-          <span class="p-misc_label">お気に入り</span>
         </a>
       </li>
     </ul>
@@ -161,7 +155,26 @@ const props = defineProps({
 
 //监测数据
 // let sendArticle = [{}];
-
+function addLike() {
+  let article = {
+    storeName: "中意的商品",
+    freight: 500,
+    freeFreight: 10000,
+    product: props.product,
+    goodsNumber: props.goodsNumber,
+    color: props.color,
+    sizeName: props.sizeName,
+    price: props.price,
+    delivery: props.delivery,
+    deliveryMethod: props.deliveryMethod,
+    amount: mount.value,
+    sum: mount.value * props.price,
+    userId: "110",
+    photo: props.photo[0],
+  };
+  //通过post发送消息
+  store.dispatch("addLikeGoods", article);
+}
 function upDataCart() {
   // 取消弹窗回调
 
@@ -181,9 +194,6 @@ function upDataCart() {
     userId: "110",
     photo: props.photo[0],
   };
-  // sendArticle.unshift(article);
-  // localStorage.setItem("useCart", JSON.stringify(sendArticle));
-
   //通过post发送消息
   store.dispatch("addUseCart", article);
 }
