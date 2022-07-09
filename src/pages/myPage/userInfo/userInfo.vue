@@ -112,8 +112,6 @@ export default defineComponent({
         newValue.path === "/userInfo/changeMaillAdress1"
           ? (userInfo2IsShow.value = false)
           : (userInfo2IsShow.value = true);
-
-        console.log("11123");
       },
       { deep: true, immediate: true }
     );

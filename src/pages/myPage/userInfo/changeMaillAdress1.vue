@@ -2,14 +2,13 @@
   <div class="main__inner-wrapper">
     <div class="g-bodyArea g-inner">
       <div class="g-main">
-        <form
-          id="uniRegisterMailForm"
-          class="g-layout-narrow"
-          action="/ec/my-account/inputCustomerIDUpdateInfo?CSRFToken=13221c10-f588-4223-867a-d0af71e4abe0"
-          method="post"
-          data-validation=""
-          commandname="uniRegisterMailForm"
-          novalidate="true"
+        <Form
+          ref="formCom"
+          id="app"
+          class="g-layout-narrow demo-ruleForm"
+          :validation-schema="mySchema"
+          v-slot="{ errors }"
+          autocomplete="off"
         >
           <div class="g-layout_lead"></div>
           <div class="g-layout_head">
@@ -20,70 +19,75 @@
             <p class="g-lead">
               ご入力いただいたメールアドレス宛にニトリネットから送信される確認メールをご確認ください。
             </p>
-            <div class="g-error g-error_efo">
-              <p class="g-error_h">入力内容をご確認ください。</p>
+
+            <div
+              class="g-error g-error_efo"
+              :style="{ display: date.errorIsShow }"
+            >
+              <p class="g-error_h">
+                <b>请修改下列错误:</b>
+              </p>
             </div>
           </div>
 
           <div class="g-layout_body">
             <dl class="g-sm-formGrid-v g-lg-formGrid-h g-block-xs">
               <dt>
-                <label for="p-mail"
+                <label for="mail"
                   >メールアドレス<span class="g-label-required"
                     >必須</span
                   ></label
                 >
               </dt>
               <dd>
-                <input
-                  id="p-mail"
-                  name="email"
+                <Field
+                  id="mail"
                   class="g-input g-input-sm g-fw"
-                  inputmode="email"
-                  data-validation-rules='[{"action":"hankaku"},"mail",{"rule":"length","max":100},{"action":"validate","subjects":["#p-mail-re"]}]'
-                  aria-describedby="p-mail_alert"
-                  aria-required="true"
-                  placeholder="nitoritarou@nitori.jp"
-                  type="text"
-                  autocapitalize="off"
-                  required="required"
-                  value=""
+                  v-model="date.email"
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  :class="{ error: errors.email }"
                 />
+
                 <div
                   class="g-formGrid_error"
                   id="p-mail_alert"
-                  role="alert"
-                ></div>
+                  v-if="errors.email"
+                >
+                  <i class="iconfont icon-warning" />{{ errors.email }}
+                </div>
               </dd>
               <dt>
-                <label for="p-mail-re"
+                <label for="chEmail"
                   ><span>メールアドレス<small>（確認用）</small></span
                   ><span class="g-label-required">必須</span></label
                 >
               </dt>
+
               <dd>
                 <p class="g-formGrid_note">
                   コピー・貼り付けはせずに入力してください。
                 </p>
-                <input
-                  id="p-mail-re"
-                  name="checkEmail"
+
+                <Field
+                  id="chEmail"
                   class="g-input g-input-sm g-fw"
-                  inputmode="email"
-                  data-validation-rules='[{"action":"hankaku"},"mail",{"rule":"length","max":100},{"rule":"match","name":"メールアドレス","subject":"#p-mail"},{"action":"validate","subjects":["#p-mail"]}]'
-                  aria-describedby="p-mail-re_alert"
-                  aria-required="true"
-                  placeholder="nitoritarou@nitori.jp"
-                  type="text"
-                  autocapitalize="off"
-                  required="required"
-                  value=""
+                  v-model="date.checkEmail"
+                  name="checkEmail"
+                  type="email"
+                  placeholder="checkEmail"
+                  autocomplete="off"
+                  :class="{ error: errors.checkEmail }"
                 />
+
                 <div
                   class="g-formGrid_error"
-                  id="p-mail-re_alert"
-                  role="alert"
-                ></div>
+                  id="p-mail_alert"
+                  v-if="errors.checkEmail"
+                >
+                  <i class="iconfont icon-warning" />{{ errors.checkEmail }}
+                </div>
               </dd>
             </dl>
 
@@ -103,50 +107,66 @@
           <div class="g-layout_foot">
             <div class="g-sm-foot-v g-lg-foot-h g-foot-lg">
               <div>
-                <input
-                  id="sourceId"
-                  name="sourceId"
-                  value="CR-042"
-                  type="hidden"
-                /><input
-                  id="buttonName"
-                  name="buttonName"
-                  type="hidden"
-                  value=""
-                /><button
+                <button
+                  @click="submits()"
                   id="formSubmitBtn"
                   class="g-btn g-btn-cv g-btn-w-md"
+                  value="Submit"
                   type="submit"
                 >
                   <span>送信する</span>
                 </button>
               </div>
               <p>
-                <a
-                  class="g-btn g-btn-w-md"
-                  href="https://www.nitori-net.jp/ec/my-account/profileEditSelect"
+                <router-link class="g-btn g-btn-w-md" to="/userInfo"
                   ><i class="g-i g-i-arrow-l" aria-hidden="true"></i
-                  ><span>戻る</span></a
+                  ><span>戻る</span></router-link
                 >
               </p>
             </div>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive, ref } from "vue";
-import type { FormInstance } from "element-plus";
+<script setup type="ts">
+import { Form, Field } from "vee-validate";
+import { reactive,ref } from "vue";
+import schema from "../../../utils/validate-schema"
 
-const ruleFormRef = ref<FormInstance>();
-</script>
-<style scoped>
-.g-error_efo {
-  display: none;
+const date = reactive({
+email:null,
+checkEmail:null,
+errorIsShow:'none'
+});
+const mySchema = {
+  email: schema.email,
+  checkEmail: schema.checkEmail,
+};
+
+
+const formCom = ref(null)
+
+async function submits(){
+formCom.value?.validate().then(item => {
+
+  if (item.valid) {
+    console.log('校验通过')
+    date.errorIsShow='none'
+  } else {
+    console.log("校验不通过");
+    date.errorIsShow='block'
+  }
+
+})
+
+
 }
+</script>
+
+<style scoped>
 .g-input[aria-invalid="true"] {
   background-color: #fcf0f1;
 }
@@ -201,7 +221,7 @@ const ruleFormRef = ref<FormInstance>();
   }
   .g-list-note,
   .g-sm-list-note {
-    font-size: 1.2rem;
+    font-size: 0.5rem;
     line-height: 1.58333;
 
     color: #808080;
@@ -298,7 +318,7 @@ const ruleFormRef = ref<FormInstance>();
   box-sizing: border-box;
 }
 h1 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 p,
 form,
@@ -410,7 +430,7 @@ button {
     margin-bottom: 35px;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   h1 + .g-lead,
   h1 + .g-lg-lead {
@@ -479,7 +499,7 @@ button {
   .g-label-price,
   .g-label-maker,
   .g-label-required {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .g-formGrid-h > dd,
   .g-formGrid-tr > dd,
@@ -534,7 +554,7 @@ button {
     width: 66%;
   }
   .g-lg-formGrid-h .g-formGrid_note {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     line-height: 1.5;
   }
   .g-lg-formGrid-h .g-formGrid_note {
