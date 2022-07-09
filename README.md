@@ -28,3 +28,6 @@ npm run lint
 ### Customize configuration
 
 json-server db.json --routes routes.json
+
+
+trim() 函数移除字符串两侧的空白字符或其他预定义字符。

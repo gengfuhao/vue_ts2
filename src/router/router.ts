@@ -8,7 +8,7 @@ import orderDetail from "../pages/myPage/order/orderDetail.vue";
 import likeGoods from "../pages/myPage/likeGoods/likeGoods.vue";
 import shopLike from "../pages/myPage/shopLike.vue";
 import userInfo from "../pages/myPage/userInfo/userInfo.vue";
-import address from "../pages/myPage/address.vue";
+import address from "../pages/myPage/address/address.vue";
 import userPay from "../pages/myPage/userPay.vue";
 import changeMaillAdress2 from "../pages/myPage/userInfo/changeMaillAdress2.vue";
 import changeMaillAdress1 from "../pages/myPage/userInfo/changeMaillAdress1.vue";
